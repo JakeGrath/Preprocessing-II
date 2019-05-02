@@ -5,23 +5,42 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-content: center;
+  }
 
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
 
       img {
         border-radius: 10px;
       }
     }
   }
+
 
   .inverse-content {
     padding-bottom: 30px;
@@ -30,17 +49,36 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
+    }
+    @media @mobile {
+      flex-flow: column-reverse nowrap;
+      justify-content: space-evenly;
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 90%;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +90,39 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      width: 90%;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 80%;
+        flex-flow: column nowrap;
+        align-items: center;
+        .btn {
+          width: 100%;
+        }
+      }
     }
   }
 }// home
+
+.break {
+  border-top: 2px dashed gray;
+}
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  justify-content: space-between;
+  h2 {
+    padding-top: 2%;
+  }
+}

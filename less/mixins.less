@@ -1,1 +1,25 @@
 // Mixins in here
+
+.btn-style(@btn-color, @btn-color-hover, @button-color-click){
+    background-color: @btn-color;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    &:hover {
+        background-color: @btn-color-hover;
+    }
+    &:active {
+        background-color: @button-color-click;
+    }
+
+
+}
+
+.btn {
+    .btn-style(rgb(43, 163, 113), rgb(43, 155, 163), rgb(20, 114, 121))
+}
