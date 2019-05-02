@@ -20,6 +20,13 @@
 
 }
 
+.wrapper (@flow, @justify,@width){
+    width: @width;
+    display: flex;
+    flex-flow: @flow;
+    justify-content: @justify;
+}
+
 .btn {
-    .btn-style(rgb(43, 163, 113), rgb(43, 155, 163), rgb(20, 114, 121))
+    .btn-style(@eastern-blue, rgb(43, 155, 163), rgb(20, 114, 121))
 }
